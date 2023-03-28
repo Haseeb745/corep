@@ -133,7 +133,7 @@ looker.plugins.visualizations.add({
         // document.write("<span style='font-family:serif; text-align: left; font-weight:normal; font-size:10px; align-items:left; border:1px solid black; background-color: #eee;'>"+note+"</span>");
         // note[0].style.font = "10pt serif";
         var wsheet = XLSX.utils.table_to_sheet(data, {origin: 'A3'});
-        XLSX.utils.sheet_add_aoa(wsheet, [[ v: "C 26.00 - Large Exposures limits (LE Limits)", t: "s", s: { font: { name: "Verdana", sz: 14 , bold: true} } ]
+        XLSX.utils.sheet_add_aoa(wsheet, [{ v: "C 26.00 - Large Exposures limits (LE Limits)", t: "s", s: { font: { name: "Verdana", sz: 14 , bold: true} } }
                   ], { origin: 'A1' });
         XLSX.utils.sheet_add_aoa(wsheet, note, { origin: 'A2' });
         var wbook = XLSX.utils.book_new();
