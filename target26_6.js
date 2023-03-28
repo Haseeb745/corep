@@ -118,7 +118,7 @@ looker.plugins.visualizations.add({
 //         header.style.fontSize = "14pt";
 //         document.getElementsByName(header).innerHTML += "C 26.00 - Large Exposures limits (LE Limits)";
         let row = [
-                  { v: "C 26.00 - Large Exposures limits (LE Limits)", t: "s", s: { font: { name: "Verdana", sz: 14 , bold: true} } },
+          { v: "C 26.00 - Large Exposures limits (LE Limits)", t: "s", s: { font: { name: "Verdana", sz: 14 , bold: true} } },
                   ];
         // header = [["C 26.00 - Large Exposures limits (LE Limits)"]];
         // header[0].style.font = "bold 14pt verdana";
@@ -133,7 +133,7 @@ looker.plugins.visualizations.add({
         // document.write("<span style='font-family:serif; text-align: left; font-weight:normal; font-size:10px; align-items:left; border:1px solid black; background-color: #eee;'>"+note+"</span>");
         // note[0].style.font = "10pt serif";
         var wsheet = XLSX.utils.table_to_sheet(data, {origin: 'A3'});
-        XLSX.utils.sheet_add_aoa(wsheet, row, { origin: 'A1' });
+        XLSX.utils.sheet_add_aoa(wsheet, [row], { origin: 'A1' });
         XLSX.utils.sheet_add_aoa(wsheet, note, { origin: 'A2' });
         var wbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(wbook, wsheet, "C26");
